@@ -1,20 +1,29 @@
 <template>
   <div class="stepper-panel">
     <div class="stepper-container d-flex w-100 my-center">
-      <div class="step d-flex justify-content-start">
+      <div
+        :class="{ active: stepOneIsActive, checked: stepOneIsChecked }"
+        class="step d-flex justify-content-start"
+      >
         <div
           class="circle m-4 d-flex align-items-center justify-content-center"
         ></div>
         <span class="stepper-line stepper-line-left"></span>
       </div>
 
-      <div class="step d-flex justify-content-center">
+      <div
+        :class="{ active: stepTwoIsActive, checked: stepTwoIsChecked }"
+        class="step d-flex justify-content-center"
+      >
         <div
           class="circle m-4 d-flex align-items-center justify-content-center"
         ></div>
       </div>
 
-      <div class="step d-flex justify-content-end">
+      <div
+        :class="{ active: stepThreeIsActive, checked: stepThreeIsChecked }"
+        class="step d-flex justify-content-end"
+      >
         <div
           class="circle m-4 d-flex align-items-center justify-content-center"
         ></div>
@@ -23,6 +32,54 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    initialStep: {
+      type: Number,
+    }
+  },
+  data() {
+    return {
+      stepOneIsActive: false,
+      stepOneIsChecked: false,
+      stepTwoIsActive: false,
+      stepTwoIsChecked: false,
+      stepThreeIsActive: false,
+      stepThreeIsChecked: false,
+    }
+  },
+  watch: {
+    initialStep: {
+      handler: function(){
+        if (this.initialStep === 0) {
+          this.stepOneIsActive = true
+          this.stepOneIsChecked = false
+          this.stepTwoIsActive = false
+          this.stepTwoIsChecked = false
+          this.stepThreeIsActive = false
+          this.stepThreeIsChecked = false
+        } else if (this.initialStep === 1) {
+          this.stepOneIsActive = true
+          this.stepOneIsChecked = true
+          this.stepTwoIsActive = true
+          this.stepTwoIsChecked = false
+          this.stepThreeIsActive = false
+          this.stepThreeIsChecked = false
+        } else if (this.initialStep === 2) {
+          this.stepOneIsActive = true
+          this.stepOneIsChecked = true
+          this.stepTwoIsActive = true
+          this.stepTwoIsChecked = true
+          this.stepThreeIsActive = true
+          this.stepThreeIsChecked = false
+        }
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 @mixin getStepNums($num) {

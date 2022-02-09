@@ -1,12 +1,17 @@
 <template>
   <div class="container py-5 w-100">
     <h1>結帳</h1>
-    <Stepper/>
+    <Stepper
+    :initialStep="step"
+    />
     <Address v-show="isAddress"/>
     <Shipping v-show="isShipping"/>
     <Pay v-show="isPay"/>
     <span class="bottom-line"></span>
-    <StepBtn :step="step"/>
+    <StepBtn 
+    :initialStep="step"
+    @changed-step="refreshStep"
+    />
   </div>
 </template>
 
@@ -33,6 +38,33 @@ export default {
       isPay: false,
     }
   },
+  created() {
+    this.step = 0
+  },
+  methods: {
+    refreshStep(changedStep) {
+      this.step = changedStep
+    }
+  },
+  watch: {
+    step: {
+      handler: function(){
+        if (this.step === 0) {
+          this.isAddress = true
+          this.isShipping = false
+          this.isPay = false
+        } else if (this.step === 1) {
+          this.isAddress = false
+          this.isShipping = true
+          this.isPay = false 
+        } else if (this.step === 2) {
+          this.isAddress = false
+          this.isShipping = false
+          this.isPay = true
+        }
+      }
+    }
+  }
 }
 </script>
 

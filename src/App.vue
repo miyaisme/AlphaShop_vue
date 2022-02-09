@@ -97,7 +97,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default {};
 </script>
 
-<style>
+<style lang="scss">
 /* reset css */
 body {
   margin: 0;
@@ -196,6 +196,13 @@ select {
 select optgroup {
   font-size: 12px;
 }
+/* basic setting */
+$body-bg: rgb(255, 255, 255);
+$body-color: #000000;
+$white: #fff;
+$black: #000000;
+$pink: #f67599;
+$gray: #f0f0f5;
 /* css style */
 #app {
     width: 1440px;
