@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav id="navbar" class="navbar d-flex justify-content-center fixed-top">
+    <nav id="navbar" class="navbar d-flex justify-content-center">
       <div class="logo">
         <img src="https://i.imgur.com/zIfk9QX.png" alt="#" class="image-logo" />
       </div>
@@ -49,7 +49,7 @@
     <main>
       <router-view/>
     </main>
-    <footer id="footer-content" class="footer d-flex fixed-bottom">
+    <footer id="footer-content" class="footer d-flex">
       <div class="footer-wrapper d-flex justify-content-between">
         <div class="footer-logo">
           <img
@@ -204,10 +204,6 @@ $black: #000000;
 $pink: #f67599;
 $gray: #f0f0f5;
 /* css style */
-#app {
-    width: 1440px;
-    margin: 0 auto;
-}
 #navbar {
   background-color: white;
 }
