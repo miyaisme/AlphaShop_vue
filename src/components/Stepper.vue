@@ -1,13 +1,14 @@
 <template>
   <div class="stepper-panel">
-    <div class="stepper-container d-flex w-100 my-center">
+    <div class="stepper-container d-flex w-100">
       <div
         :class="{ active: stepOneIsActive, checked: stepOneIsChecked }"
         class="step d-flex justify-content-start"
       >
         <div
-          class="circle m-4 d-flex align-items-center justify-content-center"
+          class="circle d-flex align-items-center justify-content-center"
         ></div>
+        <div class="d-flex align-items-center">寄送地址</div>
         <span class="stepper-line stepper-line-left"></span>
       </div>
 
@@ -16,8 +17,9 @@
         class="step d-flex justify-content-center"
       >
         <div
-          class="circle m-4 d-flex align-items-center justify-content-center"
+          class="circle d-flex align-items-center justify-content-center"
         ></div>
+        <div class="d-flex align-items-center">運送方式</div>
       </div>
 
       <div
@@ -25,8 +27,9 @@
         class="step d-flex justify-content-end"
       >
         <div
-          class="circle m-4 d-flex align-items-center justify-content-center"
+          class="circle d-flex align-items-center justify-content-center"
         ></div>
+        <div class="d-flex align-items-center">付款資訊</div> 
         <span class="stepper-line stepper-line-right"></span>
       </div>
     </div>
@@ -89,6 +92,9 @@ export default {
     }
   }
 }
+.stepper-panel {
+  margin: 24px auto;
+}
 .step {
   text-align: center;
   @include getStepNums(3);
@@ -110,8 +116,9 @@ export default {
 }
 
 .circle {
-  height: 32px;
-  width: 32px;
+  height: 24px;
+  width: 24px;
+  margin: 0 8px;
   background-color: white;
   border: solid 1px #afb1bd;
   border-radius: 50%;
@@ -126,14 +133,12 @@ export default {
   &-right {
     position: absolute;
     top: 50%;
-    right: calc(0% + 44px);
-    transform: translate(-50%, 0%);
+    transform: translateX(-100px);
   }
   &-left {
     position: absolute;
     top: 50%;
-    left: calc(50% + 44px);
-    transform: translate(-50%, 50%);
+    transform: translateX(108px);
   }
 }
 </style>

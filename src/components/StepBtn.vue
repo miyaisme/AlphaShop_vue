@@ -3,7 +3,7 @@
     id="control-panel"
     class="control-panel m-4 d-flex justify-content-between"
   >
-    <button @click.stop.prevent="stepMinus()" class="back">← 上一步</button>
+    <button @click.stop.prevent="stepMinus()" class="back d-flex align-items-start">← 上一步</button>
     <button @click.stop.prevent="stepPlus()" class="next active">
       → 下一步
     </button>

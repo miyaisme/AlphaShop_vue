@@ -1,5 +1,6 @@
 <template>
 <div class="basket-panel m-4">
+  <h5 class="title-cart">購物籃</h5>
   <div class="product-container m-4">
        <div 
        v-for="product in products"
@@ -95,7 +96,11 @@ export default {
       product.prices = product.price * product.amount
     },
     minusAmount(product){
-      product.amount -= 1
+      if(product.amount <= 1) {
+        product.amount = 1
+      } else {
+        product.amount -= 1
+      }
       product.prices = product.price * product.amount
     },
   },
@@ -121,6 +126,10 @@ export default {
 </script>
 
 <style lang="scss">
+.title-cart {
+  font-weight: 700;
+  margin: 16px 30px;
+}
   .basket-panel {
   border: solid 1px #f0f0f5;
   border-radius: 8px;
@@ -143,8 +152,13 @@ export default {
 .product-content {
   display: flex;
   flex-flow: column;
-  align-items: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: space-between;
+  align-content: space-between;
+  width: 100%;
+  height: 70px;
+  margin: 0 20px;
 }
 
 .product-amount {
@@ -201,6 +215,10 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.final-price {
+  font-weight: 700;
 }
 
 </style>

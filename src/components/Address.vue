@@ -3,9 +3,9 @@
           <div class="form-container">
             <form id="address-form" class="form">
               <div class="part m-4">
-                <h2>寄送地址</h2>
-                <div class="form-row d-flex flex-wrap">
-                  <div class="gender w-50 d-flex flex-wrap">
+                <h4 class="title">寄送地址</h4>
+                <div class="form-row d-flex flex-wrap justify-content-between w-100">
+                  <div class="gender d-flex flex-wrap">
                     <label class="row-name w-100" for="">稱謂</label>
                     <div class="select-wrapper w-100 mr-8">
                       <select name="gender" id="gender" class="w-100 mr-8 row-select">
@@ -17,19 +17,19 @@
                       </select>
                     </div>
                   </div>
-                  <div class="name w-50 d-flex flex-wrap">
+                  <div class="name d-flex flex-wrap">
                     <label class="w-100 row-name" for="">姓名</label>
                     <input type="text" value="請輸入姓名" class="w-100 row-input">
                   </div>
-                  <div class="phone w-100 d-flex flex-wrap">
+                  <div class="phone d-flex flex-wrap">
                     <label class="w-100 row-name" for="">電話</label>
                     <input type="text" value="請輸入行動電話" class="input-phone w-100 row-input">
                   </div>
-                  <div class="email w-100 d-flex flex-wrap">
+                  <div class="email d-flex flex-wrap">
                     <label class="w-100 row-name" for="">Email</label>
                     <input type="text" value="請輸入電子郵件" class="w-100 row-input">
                   </div>
-                  <div class="city w-100 d-flex flex-wrap">
+                  <div class="city d-flex flex-wrap">
                     <label class="w-100 row-name" for="">縣市</label>
                     <div class="select-city select-wrapper w-100">
                       <select name="city" id="city" class="w-100 row-select">
@@ -43,7 +43,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="adress w-100 d-flex flex-wrap">
+                  <div class="address d-flex flex-wrap">
                     <label class="w-100 row-name" for="">地址</label>
                     <input type="text" value="請輸入地址" class="w-100 row-input">
                   </div>
@@ -53,3 +53,38 @@
           </div>
         </div>
 </template>
+
+<style lang="scss">
+.title {
+  font-weight: 700;
+  margin-bottom: 12 px;
+}
+.row-name {
+  font-size: 0.75rem;
+}
+.row-input, .row-select {
+  height: 40px;
+}
+.form-row {
+  margin-bottom: 48px;
+}
+.gender, .name, .phone, .email, .city, .address {
+  margin: 12px 0;
+}
+.gender, .city {
+  width: 30%;
+}
+.name, .address {
+  width: 70%;
+  padding-left: 30px;
+}
+.phone, .email {
+  width: 50%;
+}
+.phone {
+  padding-right: 15px;
+}
+.email {
+  padding-left: 15px;
+}
+</style>

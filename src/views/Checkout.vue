@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <h1>結帳</h1>
-    <div class="d-flex">
-      <div class="container py-5 w-50">
+  <div class="row checkout container">
+    <h2 class="col-12 title container">結帳</h2>
+      <div class="col">
         <Stepper :initialStep="step" />
         <Address v-show="isAddress" />
         <Shipping v-show="isShipping"
@@ -11,10 +10,9 @@
         <span class="bottom-line"></span>
         <StepBtn :initialStep="step" @changed-step="refreshStep" />
       </div>
-      <div class="container py-5 w-50">
+      <div class="col">
         <ShoppingCar :deliverFee="deliverFee" />
       </div>
-    </div>
   </div>
 </template>
 
@@ -78,6 +76,12 @@ export default {
 </script>
 
 <style>
+.checkout {
+  margin: 100px auto;
+}
+.title {
+  font-weight: 700;
+}
 .bottom-line {
   margin: 0 auto;
   display: block;
