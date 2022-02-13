@@ -133,12 +133,12 @@ export default {
   &-right {
     position: absolute;
     top: 50%;
-    transform: translateX(-100px);
+    transform: translateX(-210%);
   }
   &-left {
     position: absolute;
     top: 50%;
-    transform: translateX(108px);
+    transform: translateX(215%);
   }
 }
 </style>

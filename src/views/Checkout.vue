@@ -1,6 +1,6 @@
 <template>
   <div class="row checkout container">
-    <h2 class="col-12 title container">結帳</h2>
+    <h2 class="col-12 title">結帳</h2>
       <div class="col">
         <Stepper :initialStep="step" />
         <Address v-show="isAddress" />
@@ -77,10 +77,7 @@ export default {
 
 <style>
 .checkout {
-  margin: 100px auto;
-}
-.title {
-  font-weight: 700;
+  margin: 0 auto;
 }
 .bottom-line {
   margin: 0 auto;

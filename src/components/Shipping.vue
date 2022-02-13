@@ -1,7 +1,7 @@
 <template>
   <form id="shipping-form" class="form">
     <div class="part m-4">
-      <h2>運送方式</h2>
+      <h4 class="title">運送方式</h4>
       <div class="deliver-form form-row d-flex flex-wrap">
         <div
           v-for="shippingWay in shippingWays"
@@ -16,10 +16,20 @@
             class="shipping-price"
             name="deliver-way"
           />
-          <label :for="shippingWay.inputId">
-            {{ shippingWay.deliverWay }}
-            {{ shippingWay.time }}
-            {{ shippingWay.fee | isNumber }}
+          <label 
+          :for="shippingWay.inputId"
+          class="w-75 d-flex align-items-center">
+            <div class="shipping-content">
+              <div>
+                {{ shippingWay.deliverWay }}
+              </div>
+              <div>
+                {{ shippingWay.time }}
+              </div>
+              <div>
+                {{ shippingWay.fee | isNumber }}
+              </div>
+            </div>
           </label>
         </div>
       </div>
@@ -83,5 +93,16 @@ export default {
 .deliver-way {
   border: solid 1px #f0f0f5;
   border-radius: 5px;
+}
+.shipping-content {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 100%;
+  height: 50px;
+  margin: 2px;
 }
 </style>

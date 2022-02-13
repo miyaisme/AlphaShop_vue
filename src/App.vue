@@ -207,6 +207,9 @@ select {
 select optgroup {
   font-size: 12px;
 }
+label {
+  margin: 0;
+}
 /* basic setting */
 $body-bg: rgb(255, 255, 255);
 $body-color: #000000;

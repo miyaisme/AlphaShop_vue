@@ -57,10 +57,12 @@
 <style lang="scss">
 .title {
   font-weight: 700;
+  margin-top: 64px;
   margin-bottom: 12 px;
 }
 .row-name {
   font-size: 0.75rem;
+  margin: 4px 0;
 }
 .row-input, .row-select {
   height: 40px;
