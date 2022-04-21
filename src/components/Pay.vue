@@ -5,19 +5,19 @@
                 <div class="form-row d-flex flex-wrap">
                   <div class="owner d-flex flex-wrap">
                     <label class="w-100 row-name" for="">持卡人姓名</label>
-                    <input type="text" value="John Doe" class="w-100 row-input">
+                    <input type="text" placeholder="請輸入姓名" class="w-100 row-input">
                   </div>
                   <div class="card-number d-flex flex-wrap">
                     <label class="w-100 row-name" for="">卡號</label>
-                    <input type="text" value="1111 2222 3333 4444" class="w-100 row-input">
+                    <input type="text" placeholder="0000 0000 0000 0000" class="w-100 row-input">
                   </div>
                   <div class="limit w-50 d-flex flex-wrap">
                     <label class="w-100 row-name" for="">有效期限</label>
-                    <input type="text" value="MM/YY" class="w-100 mr-8 row-input">
+                    <input type="text" placeholder="MM/YY" class="w-100 mr-8 row-input">
                   </div>
                   <div class="safty-numer w-50 d-flex flex-wrap">
                     <label class="w-100 row-name" for="">CVC/CCV</label>
-                    <input type="text" value="123" class="w-100 row-input">
+                    <input type="text" placeholder="000" class="w-100 row-input">
                   </div>
                 </div>
               </div>

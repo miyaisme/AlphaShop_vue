@@ -19,15 +19,15 @@
                   </div>
                   <div class="name d-flex flex-wrap">
                     <label class="w-100 row-name" for="">姓名</label>
-                    <input type="text" value="請輸入姓名" class="w-100 row-input">
+                    <input type="text" placeholder="請輸入姓名" class="w-100 row-input">
                   </div>
                   <div class="phone d-flex flex-wrap">
                     <label class="w-100 row-name" for="">電話</label>
-                    <input type="text" value="請輸入行動電話" class="input-phone w-100 row-input">
+                    <input type="text" placeholder="請輸入行動電話" class="input-phone w-100 row-input">
                   </div>
                   <div class="email d-flex flex-wrap">
                     <label class="w-100 row-name" for="">Email</label>
-                    <input type="text" value="請輸入電子郵件" class="w-100 row-input">
+                    <input type="text" placeholder="請輸入電子郵件" class="w-100 row-input">
                   </div>
                   <div class="city d-flex flex-wrap">
                     <label class="w-100 row-name" for="">縣市</label>
@@ -45,7 +45,7 @@
                   </div>
                   <div class="address d-flex flex-wrap">
                     <label class="w-100 row-name" for="">地址</label>
-                    <input type="text" value="請輸入地址" class="w-100 row-input">
+                    <input type="text" placeholder="請輸入地址" class="w-100 row-input">
                   </div>
                 </div>
               </div>
