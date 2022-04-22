@@ -16,9 +16,10 @@
             class="shipping-price"
             name="deliver-way"
           />
-          <label 
-          :for="shippingWay.inputId"
-          class="w-75 d-flex align-items-center">
+          <label
+            :for="shippingWay.inputId"
+            class="w-75 d-flex align-items-center"
+          >
             <div class="shipping-content">
               <div>
                 {{ shippingWay.deliverWay }}
@@ -81,11 +82,11 @@ export default {
   },
   watch: {
     selectedFee: {
-      handler: function(){
-        this.$emit("selected-fee", this.selectedFee)
-      }
-    }
-  }
+      handler: function () {
+        this.$emit("selected-fee", this.selectedFee);
+      },
+    },
+  },
 };
 </script>
 
